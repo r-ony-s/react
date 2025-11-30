@@ -1,8 +1,8 @@
-const Head = () => {
+const Head = (props) => {
     
     return (
         <div>
-           
+           <button onClick={props.childbtnCLick}>Submit</button>
         </div>
     );
 

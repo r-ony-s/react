@@ -6,7 +6,7 @@ const btnClick=()=>{
     }
   return (
     <div>
-      <button onClick={btnClick}>Click Me</button>
+     <Head childbtnCLick={btnClick}/>
     </div>
   );
 };
