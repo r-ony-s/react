@@ -4,9 +4,11 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={ function childbtnCLick() {
-  alert("clicked from parent");
-}}>btn</button>
+      
+      <form >
+         <input type="text" placeholder='name' />
+       <button type='submit'>Submit</button>
+      </form>
     </div>
   );
 };
