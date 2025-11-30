@@ -1,12 +1,12 @@
 import Head from '../pages/Head.jsx';
 
 const App = () => {
- function childbtnCLick() {
-  alert("clicked from parent");
-}
+
   return (
     <div>
-      <button onClick={childbtnCLick}>btn</button>
+      <button onClick={ function childbtnCLick() {
+  alert("clicked from parent");
+}}>btn</button>
     </div>
   );
 };
