@@ -1,18 +1,16 @@
-import{ useRef } from 'react';
-import Head from '../pages/Head.jsx';
+import { useRef } from 'react';
 
 const App = () => {
-  let myHeadline = useRef();
+  let number = useRef(0);
 
   const change = () => {
-    myHeadline.current.classList.remove('text-danger');
-    myHeadline.current.classList.add('text-success');
-  };
+    number.current++;
+    console.log(number.current);
+  }
  
   return (
     <div>
-       <h1 ref={myHeadline} className='text-danger'>Hello world</h1>
-        <button onClick={change} >Change</button>
+        <button onClick={change}>Button</button>
 
     </div>
   );
