@@ -1,14 +1,12 @@
 import Head from '../pages/Head.jsx';
 
 const App = () => {
-  const Info={
-    name:"Habib",
-    age:24,
-    profession:"Web Developer"
-  }
+const btnClick=()=>{
+        alert("Button Clicked");
+    }
   return (
     <div>
-      <Head title={Info} />
+      <button onClick={alert("Button Clicked")}>Click Me</button>
     </div>
   );
 };
