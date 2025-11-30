@@ -6,7 +6,7 @@ const btnClick=()=>{
     }
   return (
     <div>
-      <button onClick={alert("Button Clicked")}>Click Me</button>
+      <button onClick={btnClick}>Click Me</button>
     </div>
   );
 };
