@@ -2,19 +2,16 @@ import{ useRef } from 'react';
 import Head from '../pages/Head.jsx';
 
 const App = () => {
-  let fname,lname = useRef();
+  let myHeadline = useRef();
 
   const change = () => {
-    const firstName = fname.value;
-    const lastName = lname.value;
-
-    alert(firstName+" "+lastName);
+    myHeadline.current.classList.remove('text-danger');
+    myHeadline.current.classList.add('text-success');
   };
  
   return (
     <div>
-        <input ref={(f)=>fname=f} placeholder='firs name' />
-        <input ref={(l)=>lname=l} placeholder='last name' />
+       <h1 ref={myHeadline} className='text-danger'>Hello world</h1>
         <button onClick={change} >Change</button>
 
     </div>
