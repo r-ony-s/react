@@ -1,18 +1,12 @@
 import Head from '../pages/Head.jsx';
 
 const App = () => {
-
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    alert("Form Submitted");
-  }
+  const name=document.getElementById('name');
+ 
   return (
     <div>
-      
-      <form onSubmit={handleSubmit} >
-         <input type="text" placeholder='name' />
-       <button type='submit'>Submit</button>
-      </form>
+        <h1 id='name'></h1>
+
     </div>
   );
 };
