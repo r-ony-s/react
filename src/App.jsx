@@ -1,11 +1,16 @@
+import{ useRef } from 'react';
 import Head from '../pages/Head.jsx';
 
 const App = () => {
-  const name=document.getElementById('name');
+  const name=useRef();
+ const change=()=>{
+    name.current.innerHTML="Welcome to ReactJS";
+ }
  
   return (
     <div>
-        <h1 id='name'></h1>
+      <h1 ref={name}></h1>
+        <button onClick={change} >Change</button>
 
     </div>
   );
