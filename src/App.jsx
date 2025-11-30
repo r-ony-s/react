@@ -2,14 +2,20 @@ import{ useRef } from 'react';
 import Head from '../pages/Head.jsx';
 
 const App = () => {
-  const name=useRef();
- const change=()=>{
-    name.current.innerHTML="Welcome to ReactJS";
- }
+  const fname = useRef();
+  const lname = useRef();
+
+  const change = () => {
+    const firstName = fname.current.value;
+    const lastName = lname.current.value;
+
+    alert(firstName+" "+lastName);
+  };
  
   return (
     <div>
-      <h1 ref={name}></h1>
+        <input ref={fname} placeholder='firs name' />
+        <input ref={lname} placeholder='last name' />
         <button onClick={change} >Change</button>
 
     </div>
