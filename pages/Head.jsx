@@ -1,18 +1,9 @@
-const Head = () => {
+const Head = (props) => {
     const isLogin = false;
     return (
         <div>
-           {/* invoke function */}
-           <h1>Login Status</h1>
-           {(()=>{
-               if(isLogin){
-                return <h2>Welcome back, user!</h2>
-               }
-               else{
-                return <h2>Please log in to continue.</h2>
-               }
-           })()
-           }
+            <h1 style={{color:'red'}}>{props.title}</h1>
+           
         </div>
     );
 

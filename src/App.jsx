@@ -3,7 +3,7 @@ import Head from '../pages/Head.jsx';
 const App = () => {
   return (
     <div>
-      <Head/>
+      <Head title="From my app"/>
     </div>
   );
 };
