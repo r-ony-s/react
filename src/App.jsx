@@ -1,48 +1,23 @@
 import { useState } from 'react';
 
+
 const App = () => {
-  const [list, setList] = useState([]);
-  const [item, setItem] = useState('');
 
-  const addtolist = () => {
-    list.push(item);
-    setList([...list]);
-  };
-
-  const RemoveItem = (index) => {
-    alert("do you want to remove this item?");
-    list.splice(index, 1);
-    setList([...list]);
-  };
 
   return (
     <div>
-      <table>
-        <tbody>
-          {
-            list.length !== 0 &&
-            list.map((val, index) => {
-              return (
-                <tr key={index}>
-                  <td>{val}</td>
-                  <td>
-                    <button onClick={() => RemoveItem(index)}>
-                      Remove
-                    </button>
-                  </td>
-                </tr>
-              );
-            })
-          }
-        </tbody>
-      </table>
-
-      <input
-        onChange={(e) => setItem(e.target.value)}
-        placeholder='Item'
-      />
-
-      <button onClick={addtolist}>Add</button>
+       <form action="">
+        <input type="text" placeholder='First Name' />
+        <input type="text" placeholder='Last Name' />
+        <select >
+           <option value="">Choose city</option>
+          <option value="Dhaka">Dhaka</option>
+          <option value="Rangpur">Rangpur</option>
+        </select>
+        <input type="radio" name='gender' />Male
+        <input type="radio" name='gender' />Female
+        <button type='submit'>Submit</button>
+       </form>
     </div>
   );
 };
