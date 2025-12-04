@@ -7,8 +7,8 @@ const App = () => {
     {
       firstName:"",
       lastName:"",
-      city:"",  
-      gender:""
+      city:"Dhaka",  
+      gender:"Male"
     }
   )
 
